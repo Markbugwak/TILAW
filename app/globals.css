@@ -138,3 +138,23 @@
 .restaurant-photo-note{margin-top:5px;color:#8a5b3c;font-size:8px;line-height:1.45;font-style:italic}
 
 .map-photo-note{position:absolute;left:12px;right:12px;bottom:12px;z-index:1;padding:6px 8px;background:#fffdf8e8;color:#6d5946;font-size:8px;line-height:1.4}
+
+/* Final accessibility and interaction consistency pass */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+}
+.search-box:focus-within {
+  border-color: var(--green);
+  box-shadow: 0 1px 0 var(--green);
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
