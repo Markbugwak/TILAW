@@ -22,7 +22,7 @@ const restaurantPinIcon = L.divIcon({
 function MapFocus({ spot }: { spot?: MapSpot }) {
   const map = useMap();
   useEffect(() => {
-    if (spot) map.flyTo(spot.coordinates, spot.kind === "restaurant" ? 15 : 9, { duration: 0.7 });
+    if (spot?.coordinates) map.flyTo(spot.coordinates, spot.kind === "restaurant" ? 17 : 9, { duration: 0.7 });
   }, [map, spot]);
   return null;
 }
@@ -32,10 +32,10 @@ export default function LeafletMap({ spots, selectedId, onSelect }: { spots: Map
   return <MapContainer center={[10.17, 123.78]} zoom={9} minZoom={8} maxZoom={18} scrollWheelZoom={false} className="tilaw-leaflet-map">
     <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
     <MapFocus spot={selectedSpot} />
-    {spots.map((spot) => (
+    {spots.filter((spot) => spot.coordinates).map((spot) => (
       <Marker
         key={spot.id}
-        position={spot.coordinates}
+        position={spot.coordinates!}
         icon={spot.kind === "restaurant" ? restaurantPinIcon : areaPinIcon}
         eventHandlers={{ click: () => onSelect(spot) }}
       >
