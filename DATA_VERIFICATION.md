@@ -32,7 +32,9 @@ Restaurant-specific Google image hotlinks were removed from venue cards because 
 
 ## Restaurant pin coordinate audit
 
-The map no longer substitutes a generic Cebu City coordinate when a restaurant coordinate is missing. A restaurant marker is shown only when a published coordinate source was found. Entries without a verified coordinate remain in the restaurant list and open a Google Maps search; the detail panel explicitly says their pin is pending.
+The map no longer substitutes a generic Cebu City coordinate when a restaurant coordinate is missing. A restaurant marker is shown only when a published coordinate source supports the coordinate. Entries without a verified coordinate remain in the restaurant list and do not get a marker.
+
+For the seven venues listed below, the business listing identity/address was cross-checked against map or directory search results on 10 October 2026. Their Google Maps links now include the matched Google Place ID when available, so users open the relevant business listing rather than a broad text search. **A Place ID confirms the listing, not the exact customer entrance or an entrance-level latitude/longitude.** These seven must therefore remain without map pins until entrance coordinates are independently confirmed.
 
 Source-backed coordinates currently plotted:
 - **House of Lechon, Acacia Street:** 10.3177322, 123.9017164. Cross-checked against published coordinate listings and the Michelin address at Acacia and Tojong Streets. Sources: https://es.sulit.ph/cebu-lechon-62-of-cebus-best-lechon-establishments/ and https://guide.michelin.com/ph/en/central-visayas/cebu-city_2340421/restaurant/house-of-lechon
@@ -40,14 +42,14 @@ Source-backed coordinates currently plotted:
 - **Carbon Market, Ermita:** 10.29142, 123.8991. Market-level coordinate, not an individual vendor or stall. Source: https://cebucarbon.com/
 - **STK ta Bay!, 6 A. Climaco St:** 10.313226, 123.890103. Published restaurant coordinate. Source: https://yenliving.com/philippines-cube-studytour-merise/amp/
 
-Still pending exact map coordinates:
-- New Carcar City Public Market — verified place name and Plus Code 4J4W+4P5, but a numeric coordinate has not been independently confirmed in this audit.
-- Ann's Ngohiong by Doming's — address/listing found at 25 Fairlane Village Rd; exact venue coordinate not independently confirmed.
-- Doming's Ngohiong, V. Gullas St — listing/address found; exact venue coordinate not independently confirmed.
-- STK ta Bay! SM City Cebu — exact mall unit/coordinate not confirmed.
-- Azul, Taft Business Center — address/listing found; exact unit coordinate not independently confirmed.
-- Kusina Clasica, GND Building / F. Cabahug St — address listing found, but third-party sources differ on city labeling; exact entrance coordinate not independently confirmed.
-- Pochero Kinaraan, F. Gochan St — address listing found; exact venue coordinate not independently confirmed.
+Still pending exact entrance coordinates (do not publish map pins yet):
+- **New Carcar City Public Market** — Google/Waze listing confirms the venue name and Plus Code 4J4W+4P5. The market is a large site, so its customer entrance still needs a map/satellite check. Listing: https://www.waze.com/live-map/directions/ph/central-visayas/carcar/new-carcar-city-public-market?to=place.ChIJ4ZgiZWd9qTMRgLQKC79nGxQ
+- **Ann's Ngohiong by Doming's** — listing matches 25 Fairlane Village Rd, Cebu City. Entrance-level coordinate not confirmed. Listing: https://restaurantguru.com/Domings-Ngohiong-Cebu-City
+- **Doming's Ngohiong, V. Gullas St** — listing matches Door #1, G/F Pacific Tourist Inn, M. Gotianuy Building, V. Gullas St. Shop door/entrance coordinate not confirmed. Listing: https://restaurantguru.com/Domings-Ngohiong-Cebu-City-2
+- **STK ta Bay! — SM City Cebu** — listing matches SM Branch, Juan Luna Ave Ext; exact mall unit and closest public entrance not confirmed. Listing: https://www.waze.com/live-map/directions/ph/central-visayas/cebu-city/stk-ta-bay?to=place.ChIJT1BzO3GZqTMROkmciJqudQA
+- **Azul, Taft Business Center** — listing matches Taft Business Center, Gorordo Ave; another source specifies Asilo Street and “beside Wasted Chef.” Exact storefront entrance coordinate not confirmed. Listing: https://www.waze.com/live-map/directions/ph/central-visayas/cebu-city/azul?to=place.ChIJ3-LqHV-ZqTMRD3SneQStIUk
+- **Kusina Clasica, GND Building / F. Cabahug St** — listing matches GND Building; another directory describes it as on the second floor. City labeling conflicts between Cebu City and Mandaue City sources, and the customer entrance coordinate is not confirmed. Listing: https://kusina-clasica.locallya.com/
+- **Pochero Kinaraan, 1453 F. Gochan St** — listing matches the street address. Exact storefront entrance coordinate not independently confirmed. Listing: https://www.waze.com/live-map/directions/pochero-kinaraan-f.-gochan-cebu-city?to=place.w.81199207.812057608.14510015
 
 ## Deliberately removed or not claimed
 
