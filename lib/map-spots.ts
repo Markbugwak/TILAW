@@ -69,7 +69,9 @@ const restaurantSpots: MapSpot[] = dishes.flatMap((dish) =>
       rating: restaurant.rating,
       price: restaurant.price,
       address: restaurant.address,
-      hours: restaurant.hours
+      hours: restaurant.hours,
+      sourceUrl: restaurant.sourceUrl,
+      sourceLabel: restaurant.sourceLabel
     };
   })
 );
