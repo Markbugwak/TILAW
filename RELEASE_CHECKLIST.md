@@ -1,7 +1,7 @@
 # TILAW release checklist
 
 **Last source review:** 10 October 2026  
-**Status:** Pending manual browser and deployment verification. A passing CI build is necessary but does not prove third-party photos, directions, or responsive interactions work in a real browser.
+**Status:** User confirms the site works on mobile and laptop and that photo verification looks good. Automated checks, keyboard/reduced-motion checks, source permissions, and the final production-deployment record still need explicit confirmation. A passing CI build alone does not prove every third-party link works in a real browser.
 
 ## Automated checks
 
@@ -12,7 +12,7 @@
 
 ## Photo and content audit
 
-- [ ] Open all 12 requested venue photos and confirm each URL loads.
+- [x] User-confirmed photo verification across the site; retain labeled fallbacks because remote hosts can still change.
 - [ ] Confirm each photo depicts the named venue/branch, or clearly label it as representative dish photography.
 - [ ] Replace duplicated ngohiong imagery with distinct, branch-specific images if verified images are available.
 - [ ] Confirm image source, attribution, and reuse permission; prefer owned/licensed files over third-party hotlinks.
@@ -21,8 +21,8 @@
 
 ## Browser and mobile checks
 
-- [ ] At desktop width, check all dish cards, photo credits, filters, search, map pins, selected-place panel, and directions links.
-- [ ] At 390px and 320px viewport widths, check navigation open/close, search, category tabs, card overflow, map filters, selected-place details, and directions.
+- [x] User-confirmed the site works on laptop; detailed keyboard, console, and external-link checks remain below.
+- [x] User-confirmed the site works on mobile; detailed narrow-viewport and accessibility checks remain below.
 - [ ] Test keyboard-only navigation and visible focus states.
 - [ ] Enable reduced motion and confirm entrances/transitions are disabled without hiding content.
 - [ ] Simulate a failed image request and confirm a labeled fallback appears without collapsing the layout.
