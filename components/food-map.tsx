@@ -1,8 +1,8 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
-import { ArrowUpRight, MapPin, Navigation } from "lucide-react";
-import { foodPlaces, type FoodPlace } from "@/lib/places";
+import { ArrowUpRight, MapPin, Navigation, Star } from "lucide-react";
+import { mapSpots, type MapSpot } from "@/lib/map-spots";
 
 const LeafletMap = dynamic(() => import("@/components/leaflet-map"), {
   ssr: false,
@@ -12,27 +12,27 @@ const filters = ["All spots", "Street food", "Local favorites", "Sweets & pasalu
 
 export default function FoodMap() {
   const [activeFilter, setActiveFilter] = useState("All spots");
-  const [selectedId, setSelectedId] = useState(foodPlaces[0].id);
-  const visiblePlaces = useMemo(
-    () => activeFilter === "All spots" ? foodPlaces : foodPlaces.filter((place) => place.category === activeFilter),
+  const [selectedId, setSelectedId] = useState(mapSpots[0]?.id ?? "");
+  const visibleSpots = useMemo(
+    () => activeFilter === "All spots" ? mapSpots : mapSpots.filter((spot) => spot.category === activeFilter),
     [activeFilter]
   );
-  const selectedPlace = visiblePlaces.find((place) => place.id === selectedId) ?? visiblePlaces[0];
+  const selectedSpot = visibleSpots.find((spot) => spot.id === selectedId) ?? visibleSpots[0];
 
-  function selectPlace(place: FoodPlace) {
-    setSelectedId(place.id);
+  function selectSpot(spot: MapSpot) {
+    setSelectedId(spot.id);
   }
 
   function changeFilter(filter: string) {
     setActiveFilter(filter);
-    const nextPlaces = filter === "All spots" ? foodPlaces : foodPlaces.filter((place) => place.category === filter);
-    if (nextPlaces.length) setSelectedId(nextPlaces[0].id);
+    const nextSpots = filter === "All spots" ? mapSpots : mapSpots.filter((spot) => spot.category === filter);
+    setSelectedId(nextSpots[0]?.id ?? "");
   }
 
   return (
     <div className="food-map-shell">
       <div className="map-toolbar">
-        <div className="map-filter-label"><span className="map-live-dot" /> EXPLORE BY PLACE</div>
+        <div className="map-filter-label"><span className="map-live-dot" /> EXPLORE FOOD AREAS & RESTAURANTS</div>
         <div className="map-filters" aria-label="Filter map pins">
           {filters.map((filter) => (
             <button
@@ -50,29 +50,38 @@ export default function FoodMap() {
 
       <div className="map-layout">
         <div className="map-canvas-wrap">
-          <LeafletMap places={visiblePlaces} selectedId={selectedPlace?.id ?? ""} onSelect={selectPlace} />
-          <div className="map-legend"><span><i /> Food area</span><span>OpenStreetMap</span></div>
+          <LeafletMap spots={visibleSpots} selectedId={selectedSpot?.id ?? ""} onSelect={selectSpot} />
+          <div className="map-legend"><span><i /> Food area</span><span><b className="map-restaurant-legend" /> Restaurant</span><span>OpenStreetMap</span></div>
         </div>
 
-        <aside className="map-side-panel" aria-live="polite" aria-label="Selected food area">
-          {selectedPlace ? (
+        <aside className="map-side-panel" aria-live="polite" aria-label="Selected food area or restaurant">
+          {selectedSpot ? (
             <>
-              <div className="map-detail-image" style={{ backgroundImage: selectedPlace.image ? `url("${selectedPlace.image}")` : undefined }}>
-                {!selectedPlace.image && <span className="map-photo-placeholder">LOCAL FOOD PHOTO BEING VERIFIED</span>}
-                <span className="map-detail-category">{selectedPlace.category}</span>
-                <span className="map-detail-number">0{foodPlaces.findIndex((place) => place.id === selectedPlace.id) + 1}</span>
+              <div className="map-detail-image" style={{ backgroundImage: selectedSpot.image ? `url("${selectedSpot.image}")` : undefined }}>
+                {!selectedSpot.image && <span className="map-photo-placeholder">LOCAL FOOD PHOTO BEING VERIFIED</span>}
+                <span className="map-detail-category">{selectedSpot.kind === "restaurant" ? "Restaurant" : selectedSpot.category}</span>
+                <span className="map-detail-number">{selectedSpot.kind === "restaurant" ? <MapPin size={14} /> : `0${mapSpots.findIndex((spot) => spot.id === selectedSpot.id) + 1}`}</span>
               </div>
               <div className="map-detail-content">
-                <div className="map-location-label"><MapPin size={13} /> {selectedPlace.area}</div>
-                <h3>{selectedPlace.name}</h3>
-                <div className="map-specialty">Known for <strong>{selectedPlace.specialty}</strong></div>
-                <p>{selectedPlace.description}</p>
-                <div className="map-association-note">{selectedPlace.association}</div>
-                <a className="map-source-link" href={selectedPlace.sourceUrl} target="_blank" rel="noreferrer">
-                  Source: {selectedPlace.sourceLabel} <ArrowUpRight size={13} />
-                </a>
-                <a className="map-directions" href={selectedPlace.mapLink} target="_blank" rel="noreferrer">
-                  <Navigation size={15} /> Explore this area <ArrowUpRight size={15} />
+                <div className="map-location-label"><MapPin size={13} /> {selectedSpot.area}</div>
+                <h3>{selectedSpot.name}</h3>
+                <div className="map-specialty">{selectedSpot.kind === "restaurant" ? "Try it for " : "Known for "}<strong>{selectedSpot.specialty}</strong></div>
+                {selectedSpot.kind === "restaurant" && (
+                  <div className="map-restaurant-meta">
+                    {selectedSpot.rating && <span><Star size={13} fill="currentColor" /> {selectedSpot.rating}</span>}
+                    {selectedSpot.price && <span>{selectedSpot.price}</span>}
+                  </div>
+                )}
+                <p>{selectedSpot.description}</p>
+                {selectedSpot.hours && <div className="map-restaurant-hours"><strong>Hours:</strong> {selectedSpot.hours}</div>}
+                <div className="map-association-note">{selectedSpot.association}</div>
+                {selectedSpot.sourceUrl && selectedSpot.sourceLabel && (
+                  <a className="map-source-link" href={selectedSpot.sourceUrl} target="_blank" rel="noreferrer">
+                    Source: {selectedSpot.sourceLabel} <ArrowUpRight size={13} />
+                  </a>
+                )}
+                <a className="map-directions" href={selectedSpot.mapLink} target="_blank" rel="noreferrer">
+                  <Navigation size={15} /> {selectedSpot.kind === "restaurant" ? "Directions / verify location" : "Explore this area"} <ArrowUpRight size={15} />
                 </a>
               </div>
             </>
@@ -83,22 +92,22 @@ export default function FoodMap() {
       </div>
 
       <div className="map-place-list">
-        {visiblePlaces.map((place) => (
+        {visibleSpots.map((spot) => (
           <button
             type="button"
-            key={place.id}
-            onClick={() => selectPlace(place)}
-            className={selectedPlace?.id === place.id ? "map-place-row selected" : "map-place-row"}
-            aria-pressed={selectedPlace?.id === place.id}
+            key={spot.id}
+            onClick={() => selectSpot(spot)}
+            className={selectedSpot?.id === spot.id ? "map-place-row selected" : "map-place-row"}
+            aria-pressed={selectedSpot?.id === spot.id}
           >
-            <span className="map-place-pin"><MapPin size={16} /></span>
-            <span className="map-place-row-copy"><strong>{place.name}</strong><small>{place.specialty}</small></span>
+            <span className={spot.kind === "restaurant" ? "map-place-pin restaurant-pin" : "map-place-pin"}><MapPin size={16} /></span>
+            <span className="map-place-row-copy"><strong>{spot.name}</strong><small>{spot.kind === "restaurant" ? spot.address : spot.specialty}</small></span>
             <ArrowUpRight size={16} />
           </button>
         ))}
       </div>
       <p className="map-disclaimer">
-        Pins represent food areas and town-level specialties, not verified restaurant addresses. Source links support the local food associations; they do not verify individual eateries. Restaurant pins will be added only after checking their location and details.
+        The map includes food-area pins and restaurant suggestions. Restaurant pins use approximate neighborhood coordinates based on the supplied addresses; use “Directions / verify location” to open Google Maps and confirm the exact venue. Ratings, prices, and hours can change and should be checked before visiting.
       </p>
     </div>
   );
