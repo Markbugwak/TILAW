@@ -12,9 +12,21 @@
 - Tuslob buwa — uses a photo of Loy's Tuslob Buwa stall at Carbon Market/The Barracks; it is not a close-up of the dish: https://commons.wikimedia.org/wiki/File:Loy%27s_Tuslob_Buwa_at_the_Carbon_Market_The_Barracks_(2024-04-10).jpg
 - Pochero — uses a representative chicken pochero image; this is not a claim that the photo depicts a specific Cebu beef pochero serving: https://commons.wikimedia.org/wiki/File:Chicken_pochero1.jpg
 - Otap — existing Commons image credit retained: https://commons.wikimedia.org/wiki/File:Otap.jpg
-- Torta sa Argao — no image shown until a suitable authentic image and reuse license can be confirmed.
+- Torta sa Argao — currently references a Cebu Daily News image and feature page. The subject is relevant to Argao torta, but the reuse license/permission has not been independently confirmed; replace it with an owned or permission-cleared photo before production use.
 
-Restaurant-specific Google image hotlinks were removed from venue cards because a venue match and reuse permission could not be confirmed. The cards use neutral placeholders until permission-cleared photos are available.
+## Venue image reliability audit
+
+The venue cards now have image URLs assigned for House of Lechon, Rico's Lechon, New Carcar City Public Market, Carbon Market, Ann's Ngohiong by Doming's, Doming's Ngohiong, both STK ta Bay! branches, Azul, Kusina Clasica, and Pochero Kinaraan. This is a source/metadata pass, **not a successful live HTTP/browser load test**. Third-party image hosts can block hotlinking or remove assets; the UI now displays a labeled fallback instead of a blank image when a request fails.
+
+Important accuracy notes:
+- Some venue image URLs are third-party listing images and are not yet confirmed as the exact named branch.
+- The kinilaw image used for STK ta Bay! is representative dish photography, not a verified restaurant photo.
+- The chicken pochero image used for Pochero Kinaraan is representative dish photography, not a verified photo of that restaurant's Cebu-style beef pochero.
+- The same Foodpanda-hosted image URL is currently used for both ngohiong venues; replace with distinct branch-specific images once they can be verified.
+- Image reuse permission must be checked before production; a publicly reachable URL is not permission to republish.
+- Torta sa Argao's source link is provided, but reuse permission remains unconfirmed.
+
+Before release, manually open each image source and confirm it loads, depicts the claimed venue/dish, and has acceptable reuse permission. Prefer locally stored, licensed/owned assets to third-party hotlinks.
 
 ## Restaurant/address sources checked
 
@@ -56,7 +68,7 @@ Still pending exact entrance coordinates (do not publish map pins yet):
 
 **Fallback applied:** 10 October 2026. The seven listings that still lack independently verified door-level coordinates are not assigned guessed latitude/longitude values. Each listing uses its matched Google Place ID in its Google Maps destination link, so the user can open the specific business listing and use the current directions/entrance information provided there. This makes the venue navigation-ready without misrepresenting a business/building pin as a verified customer-door coordinate.
 
-This fallback is a practical navigation solution, **not proof that the exact entrance coordinates were independently surveyed**. Keep these seven off the in-app coordinate pins until a reliable entrance-level source is available. The venue-specific map links and the visible UI note are the source of truth for this distinction.
+This fallback is a practical navigation solution, **not proof that the exact entrance coordinates were independently surveyed**. Keep these seven off the in-app coordinate pins until a reliable entrance-level source is available. The venue-specific map links and the visible UI note are the source of truth for this distinction. The photo URLs are still subject to a separate live load and reuse-permission check.
 
 ## Deliberately removed or not claimed
 
