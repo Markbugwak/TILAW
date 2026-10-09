@@ -5,7 +5,7 @@ export type MapSpot = {
   id: string;
   name: string;
   area: string;
-  coordinates: [number, number];
+  coordinates?: [number, number];
   specialty: string;
   category: string;
   description: string;
@@ -21,23 +21,13 @@ export type MapSpot = {
   hours?: string;
 };
 
-// Restaurant coordinates are neighborhood-level approximations based on the
-// supplied addresses. The Google Maps links open a live search for the exact
-// venue, so visitors can confirm the entrance and current location.
+// Only pins with a source-backed venue coordinate are plotted.
+// Other restaurants remain in the list but have no marker until verified.
 const restaurantCoordinates: Record<string, [number, number]> = {
-  "House of Lechon": [10.3157, 123.8995],
-  "House of Lechon — J Centre": [10.3332, 123.9317],
-  "House of Lechon — Banilad": [10.3420, 123.9125],
-  "Rico's Lechon": [10.3165, 123.8972],
-  "New Carcar City Public Market": [10.1061, 123.6402],
-  "Carbon Market": [10.2965, 123.9021],
-  "Ann's Ngohiong by Doming's": [10.3072, 123.8840],
-  "Doming's Ngohiong": [10.2947, 123.8982],
-  "STK ta Bay!": [10.2960, 123.8973],
-  "STK ta Bay! — SM City Cebu": [10.3104, 123.9185],
-  "Azul": [10.3220, 123.8992],
-  "Kusina Clasica": [10.3210, 123.9122],
-  "Pochero Kinaraan": [10.3216, 123.9070]
+  "House of Lechon": [10.3177322, 123.9017164],
+  "Rico's Lechon": [10.3184728, 123.8961113],
+  "Carbon Market": [10.29142, 123.8991],
+  "STK ta Bay!": [10.313226, 123.890103]
 };
 
 const dishCategoryToMapCategory: Record<string, string> = {
@@ -53,16 +43,16 @@ const areaSpots: MapSpot[] = foodPlaces.map((place: FoodPlace) => ({
 
 const restaurantSpots: MapSpot[] = dishes.flatMap((dish) =>
   (dish.restaurants ?? []).map((restaurant: RestaurantSpot, index) => {
-    const coordinates = restaurantCoordinates[restaurant.name] ?? [10.3157, 123.8854];
+    const coordinates = restaurantCoordinates[restaurant.name];
     return {
       id: `restaurant-${dish.id}-${index}`,
       name: restaurant.name,
       area: restaurant.address,
-      coordinates,
+      ...(coordinates ? { coordinates } : {}),
       specialty: dish.name,
       category: dish.id === "sutukil" ? "Seafood" : dishCategoryToMapCategory[dish.category] ?? "Local favorites",
       description: restaurant.description,
-      association: "Restaurant details and ratings are based on the information supplied for this guide. Check the venue's current listing before visiting.",
+      association: coordinates ? "Pin coordinates were cross-checked against a published location source. Confirm the exact entrance in Google Maps before travelling." : "Exact map coordinates have not yet been verified for this venue. Use the Google Maps link to confirm the exact entrance; no map pin is shown yet.",
       image: restaurant.image ?? dish.image,
       mapLink: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurant.mapSearch)}`,
       kind: "restaurant" as const,
