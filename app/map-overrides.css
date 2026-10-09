@@ -1,0 +1,8 @@
+.tilaw-map-pin.restaurant{background:var(--green);border-color:#fffdf8}
+.map-restaurant-legend{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:5px}
+.map-restaurant-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}
+.map-restaurant-meta span{display:inline-flex;align-items:center;gap:4px;padding:6px 8px;background:#f0ece3;color:var(--green);font-size:10px;font-weight:700}
+.map-restaurant-hours{font-size:10px;line-height:1.65;color:var(--muted);margin-top:3px}
+.map-restaurant-hours strong{color:var(--ink)}
+.tilaw-popup a{display:inline-flex;margin-top:3px;color:var(--terracotta);font-size:10px;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:700px){.map-legend{flex-wrap:wrap;gap:8px}.map-restaurant-meta{gap:6px}}
