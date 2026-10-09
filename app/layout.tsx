@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "leaflet/dist/leaflet.css";
 import "./globals.css";
+import "./map-overrides.css";
 
 export const metadata: Metadata = {
   title: "TILAW — Ang lami sa Sugbo",
