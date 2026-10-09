@@ -123,3 +123,9 @@
     transform: none !important;
   }
 }
+
+
+/* Image resilience: keep failed remote photos visibly labeled instead of leaving blank space. */
+.map-detail-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0}
+.map-detail-category,.map-detail-number{position:relative;z-index:1}
+.map-photo-placeholder{z-index:0}
