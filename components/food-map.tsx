@@ -58,7 +58,7 @@ export default function FoodMap() {
           {selectedSpot ? (
             <>
               <div className="map-detail-image" style={{ backgroundImage: selectedSpot.image ? `url("${selectedSpot.image}")` : undefined }}>
-                {!selectedSpot.image && <span className="map-photo-placeholder">LOCAL FOOD PHOTO BEING VERIFIED</span>}
+                {!selectedSpot.image && <span className="map-photo-placeholder">{selectedSpot.kind === "restaurant" ? "VENUE PHOTO NOT VERIFIED" : "LOCAL FOOD PHOTO BEING VERIFIED"}</span>}
                 <span className="map-detail-category">{selectedSpot.kind === "restaurant" ? "Restaurant" : selectedSpot.category}</span>
                 <span className="map-detail-number">{selectedSpot.kind === "restaurant" ? <MapPin size={14} /> : `0${mapSpots.findIndex((spot) => spot.id === selectedSpot.id) + 1}`}</span>
               </div>
@@ -107,7 +107,7 @@ export default function FoodMap() {
         ))}
       </div>
       <p className="map-disclaimer">
-        The map includes food-area pins and restaurant suggestions. Restaurant pins use approximate neighborhood coordinates based on the supplied addresses; use “Directions / verify location” to open Google Maps and confirm the exact venue. Ratings, prices, and hours can change and should be checked before visiting.
+        The map includes food-area pins and restaurant suggestions. Restaurant addresses were checked against available listings, but map markers still use approximate neighborhood coordinates and are not GPS-verified entrances. Always open “Directions / verify location” to confirm the exact venue. Ratings and prices are omitted when not recently verified; opening hours can change, so confirm before visiting.
       </p>
     </div>
   );
