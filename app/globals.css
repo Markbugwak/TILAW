@@ -22,3 +22,20 @@
 
 
 .map-source-link{display:inline-flex;align-items:center;gap:5px;margin-top:13px;color:var(--terracotta);font-size:9px;line-height:1.6;text-decoration:underline;text-underline-offset:3px}.map-source-link:hover{color:var(--green)}.map-source-link svg{flex-shrink:0}
+
+/* Restaurant recommendations nested under each dish */
+.restaurant-list{margin-top:22px;padding-top:17px;border-top:1px solid var(--line);display:grid;gap:13px}
+.restaurant-list-heading{display:flex;align-items:center;gap:8px;font-size:8px;letter-spacing:.14em;color:var(--terracotta);font-weight:700;margin-bottom:2px}
+.restaurant-list-heading .eyebrow-line{width:17px;height:1px;background:var(--terracotta)}
+.restaurant-spot{display:grid;grid-template-columns:88px minmax(0,1fr);gap:11px;padding:11px;background:#f5f1e8;border:1px solid #e8e0d3;min-width:0}
+.restaurant-spot-image,.restaurant-spot-placeholder{width:88px;height:92px;object-fit:cover;background:#e4ddcf}
+.restaurant-spot-placeholder{display:grid;place-items:center;color:var(--green);font:italic 19px 'Playfair Display',serif}
+.restaurant-spot-body{min-width:0}
+.restaurant-spot-title{display:flex;justify-content:space-between;align-items:flex-start;gap:6px}
+.restaurant-spot-title h4{font:600 13px/1.35 'DM Sans',sans-serif;margin:0;color:var(--ink)}
+.restaurant-rating{white-space:nowrap;font-size:9px;font-weight:700;color:#8b552f}
+.restaurant-meta,.restaurant-address,.restaurant-hours{font-size:9px;line-height:1.55;color:var(--muted);margin-top:5px}
+.restaurant-spot-body p{font-size:10px;line-height:1.65;min-height:0;margin:8px 0;color:var(--muted)}
+.restaurant-map-link{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:700;color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.restaurant-map-link:hover{color:var(--terracotta)}
+@media(max-width:700px){.restaurant-spot{grid-template-columns:76px minmax(0,1fr);gap:9px;padding:9px}.restaurant-spot-image,.restaurant-spot-placeholder{width:76px;height:84px}.restaurant-spot-title h4{font-size:12px}.restaurant-spot-body p{font-size:10px}}
