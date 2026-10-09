@@ -39,3 +39,87 @@
 .restaurant-map-link{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:700;color:var(--green);text-decoration:underline;text-underline-offset:3px}
 .restaurant-map-link:hover{color:var(--terracotta)}
 @media(max-width:700px){.restaurant-spot{grid-template-columns:76px minmax(0,1fr);gap:9px;padding:9px}.restaurant-spot-image,.restaurant-spot-placeholder{width:76px;height:84px}.restaurant-spot-title h4{font-size:12px}.restaurant-spot-body p{font-size:10px}}
+
+
+/* TILAW motion polish: quiet editorial entrances and tactile interactions */
+@keyframes tilaw-fade-up {
+  from { opacity: 0; transform: translate3d(0, 18px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@keyframes tilaw-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes tilaw-image-settle {
+  from { opacity: .65; transform: scale(1.035); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes tilaw-menu-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.site-header { animation: tilaw-fade-in .55s ease-out both; }
+.hero-copy > * { animation: tilaw-fade-up .7s cubic-bezier(.2,.7,.2,1) both; }
+.hero-copy > *:nth-child(1) { animation-delay: .06s; }
+.hero-copy > *:nth-child(2) { animation-delay: .13s; }
+.hero-copy > *:nth-child(3) { animation-delay: .2s; }
+.hero-copy > *:nth-child(4) { animation-delay: .27s; }
+.hero-copy > *:nth-child(5) { animation-delay: .34s; }
+.hero-photo-main img { animation: tilaw-image-settle 1.15s cubic-bezier(.2,.7,.2,1) both; }
+.photo-caption { animation: tilaw-fade-up .7s .28s ease-out both; }
+.hero-stamp { animation: tilaw-fade-in .9s .42s ease-out both; }
+.hero-floating-note { animation: tilaw-fade-up .65s .38s ease-out both; }
+.intro-strip > * { animation: tilaw-fade-up .7s ease-out both; }
+.intro-strip > *:nth-child(2) { animation-delay: .08s; }
+.intro-strip > *:nth-child(3) { animation-delay: .15s; }
+.dish-card { animation: tilaw-fade-up .6s cubic-bezier(.2,.7,.2,1) both; }
+.dish-card:nth-child(3n + 2) { animation-delay: .07s; }
+.dish-card:nth-child(3n) { animation-delay: .14s; }
+.dish-image { will-change: transform; }
+.dish-card:hover .dish-image { filter: saturate(1.06); }
+.category-tab, .map-filter, .button-primary, .button-light, .button-text,
+.round-arrow, .map-place-row, .restaurant-map-link, .footer-links a {
+  transition: color .22s ease, background-color .22s ease, border-color .22s ease,
+    transform .22s ease, box-shadow .22s ease, filter .22s ease;
+}
+.category-tab:active, .map-filter:active, .button-primary:active, .button-light:active {
+  transform: translateY(1px) scale(.985);
+}
+.round-arrow { transition: transform .25s ease, background-color .25s ease, color .25s ease; }
+.dish-card:hover .round-arrow { transform: translate(2px, 2px); background: var(--green); color: var(--white); }
+.story-image img { transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .6s ease; }
+.story-image:hover img { transform: scale(1.025); filter: saturate(1.04); }
+.map-place-row:hover { background: #f0ece3; }
+.map-place-row:hover .map-place-pin { transform: translateY(-2px); }
+.map-place-pin { transition: transform .22s ease; }
+.restaurant-spot { transition: border-color .22s ease, transform .22s ease, box-shadow .22s ease; }
+.restaurant-spot:hover { border-color: #cfc2ad; transform: translateY(-2px); box-shadow: 0 7px 18px #29291b0a; }
+.desktop-nav a { transition: color .2s ease; }
+.mobile-menu-button svg { transition: transform .2s ease; }
+.mobile-menu-button:active svg { transform: scale(.9); }
+.desktop-nav.nav-open { animation: tilaw-menu-in .22s ease-out both; }
+.newsletter-mark { transition: transform .35s ease, background-color .35s ease; }
+.newsletter-mark:hover { transform: rotate(-6deg) translateY(-2px); background: #ffffff0a; }
+.button-primary:focus-visible, .button-light:focus-visible, .button-text:focus-visible,
+.category-tab:focus-visible, .map-filter:focus-visible, .mobile-menu-button:focus-visible,
+.desktop-nav a:focus-visible, .map-place-row:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 4px;
+}
+@media (max-width: 700px) {
+  .hero-copy > * { animation-duration: .55s; }
+  .dish-card:nth-child(n) { animation-delay: 0s; }
+  .story-image:hover img { transform: none; }
+  .restaurant-spot:hover { transform: none; box-shadow: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header, .hero-copy > *, .hero-photo-main img, .photo-caption,
+  .hero-stamp, .hero-floating-note, .intro-strip > *, .dish-card {
+    animation: none !important;
+  }
+  .dish-image, .story-image img, .restaurant-spot, .map-place-pin,
+  .newsletter-mark, .mobile-menu-button svg {
+    transition: none !important;
+    transform: none !important;
+  }
+}
