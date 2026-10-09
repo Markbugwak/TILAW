@@ -69,6 +69,7 @@ export default function FoodMap() {
                   fallbackLabel={selectedSpot.kind === "restaurant" ? "VENUE PHOTO NOT VERIFIED" : "LOCAL FOOD PHOTO BEING VERIFIED"}
                 />
                 <span className="map-detail-category">{selectedSpot.kind === "restaurant" ? "Restaurant" : selectedSpot.category}</span>
+                {selectedSpot.imageNote && <span className="map-photo-note">{selectedSpot.imageNote}</span>}
                 <span className="map-detail-number">{selectedSpot.kind === "restaurant" ? <MapPin size={14} /> : `0${mapSpots.findIndex((spot) => spot.id === selectedSpot.id) + 1}`}</span>
               </div>
               <div className="map-detail-content">
