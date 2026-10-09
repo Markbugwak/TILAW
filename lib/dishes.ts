@@ -35,13 +35,15 @@ export const dishes: Dish[] = [
     place: "Tibuok Sugbo",
     description: "Hinay-hinay nga sinugba nga baboy nga nailhan sa nipis ug malutong nga panit ug humot nga panimpla.",
     note: "ANG GARBO SA SUGBO",
-    image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SM42utaBXH4gZu3TL5V-WzfA1TQVgq_Sx43Rc--I40CtIuaFYAauKKwatyC4ADpc4chTG1QYQoLWqqCL5yOVwTS4cd5PKDMaC7uH6asHnYmZcSK8fPlCKNiVY_2Rd7vdBRIQvQ0jOCtvkv=w1333-h1000-k-no",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Lechon_Cebu_2.jpg",
+    imageCredit: "Bim24 · CC BY-SA 4.0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:Lechon_Cebu_2.jpg",
     restaurants: [
-      { name: "House of Lechon", rating: "4.5", price: "₱500–₱1,000", type: "Lechon restaurant", address: "Acacia St, Cebu City", hours: "Reported opening: 10:00 AM", description: "Upscale but comfortable dining, known for rich, mildly spicy lechon drippings.", image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SM42utaBXH4gZu3TL5V-WzfA1TQVgq_Sx43Rc--I40CtIuaFYAauKKwatyC4ADpc4chTG1QYQoLWqqCL5yOVwTS4cd5PKDMaC7uH6asHnYmZcSK8fPlCKNiVY_2Rd7vdBRIQvQ0jOCtvkv=w1333-h1000-k-no", mapSearch: "House of Lechon Acacia Street Cebu City" },
-      { name: "House of Lechon — J Centre", rating: "4.2", price: "₱1–₱500", type: "Restaurant / food court", address: "J Centre Building Food Court, A. S. Fortuna St, Mandaue", hours: "Reported opening: 10:00 AM", description: "A convenient casual option for the brand's signature seasoned lechon.", image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QG9wIJ25fOF0pJ7b2wQLvx3CVf4sXtgazsRrgiaBlxl_6mipEO4vH0Fd4kEnlXFGBl46KXI_uh9ThRyqfSUiaEZd3bE7-rpP46l7iDwZfW_-pYZryBTlxuEkcmvcE8iXRCQrcm5JN1Mcro=w1000-h1333-k-no", mapSearch: "House of Lechon J Centre Mandaue" },
-      { name: "House of Lechon — Banilad", rating: "3.9", price: "₱1–₱1,500", type: "Filipino restaurant", address: "Gov. M. Cuenco Ave, Cebu City", hours: "Reported opening: 10:00 AM", description: "Another option for sharing a Cebuano lechon meal with friends.", image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RZuA9Wz1luNwREQ2V_dr75bf61p0CVkcQomU4E-19CsJASER8AjmL9TSMc1HZixW4GThGzIjJqcoqh8CNyzG4xBmRowQP1Ms_Q0a56eOnnQPkmoAANcNEWAtrvXdQQUHDdJQSm=w1000-h1333-k-no", mapSearch: "House of Lechon Gov M Cuenco Avenue Cebu" },
-      { name: "Rico's Lechon", rating: "3.7", price: "₱500–₱1,000", type: "Lechon restaurant", address: "N. Escario St, Cebu City", hours: "Reported opening: 10:00 AM", description: "Popular for its spicy lechon with bold garlic and chili flavors.", image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S1W48jxCexZnYwb0wafEzYF6lRoxzG01OiUFxZiyrsI5pOlsexwUM-GUKSgYd5vPlJoxrTASMW7EeMGqMcEJGQkQE6o1i1c9mPjxXOBP5wlCe-xatV_SpMqFSqUOV7hhZg280kQ=w1000-h1333-k-no", mapSearch: "Rico's Lechon N Escario Cebu City" },
-      { name: "New Carcar City Public Market", rating: "4.1", type: "Public market", address: "Carcar City, Cebu", hours: "Reported opening: 5:00 AM", description: "A lively local market where vendors sell lechon by the kilo; a great south Cebu food stop.", image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RnDqz3ccv31JB82q6w9r4qXA2XHvkTsMW38L_qJXsEEG5ao4gz-17MKVm32YpsRvoe0tEnBz1mj1EyMMJigAMhZ3CBQOJ6pWQRXRiZ4s7pgJpnOjcbDDfmSppfFD_Z0ljOtzs=w1333-h1000-k-no", mapSearch: "New Carcar City Public Market Cebu lechon" }
+      { name: "House of Lechon", type: "Lechon restaurant", address: "Acacia and Tojong Streets, Cebu City", hours: "10:00 AM–9:00 PM (Michelin listing; recheck before visiting)", description: "Upscale but comfortable dining, known for rich, mildly spicy lechon drippings.", image: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Lechon_Cebu_2.jpg", mapSearch: "House of Lechon Acacia Street Cebu City" },
+      { name: "House of Lechon — J Centre", type: "Restaurant / food court", address: "J Centre Building Food Court, A. S. Fortuna St, Mandaue", description: "A convenient casual option for the brand's signature seasoned lechon.", image: "", mapSearch: "House of Lechon J Centre Mandaue" },
+      { name: "House of Lechon — Banilad", type: "Filipino restaurant", address: "Gov. M. Cuenco Ave, Cebu City", description: "Another option for sharing a Cebuano lechon meal with friends.", image: "", mapSearch: "House of Lechon Gov M Cuenco Avenue Cebu" },
+      { name: "Rico's Lechon", type: "Lechon restaurant", address: "Unit 15 & 16, Axis Entertainment Avenue, N. Escario St, Kamputhaw, Cebu City", hours: "10:00 AM–9:00 PM Mon–Thu; 10:00 AM–10:00 PM Fri–Sun (official site)", description: "Popular for its spicy lechon with bold garlic and chili flavors.", image: "", mapSearch: "Rico's Lechon N Escario Cebu City" },
+      { name: "New Carcar City Public Market", type: "Public market", address: "Carcar City, Cebu", description: "A lively local market where vendors sell lechon by the kilo; a great south Cebu food stop.", image: "", mapSearch: "New Carcar City Public Market Cebu lechon" }
     ]
   },
   {
@@ -52,9 +54,11 @@ export const dishes: Dish[] = [
     place: "Mga karsada sa Cebu",
     description: "Bugas nga giluto sulod sa hinabol nga dahon sa lubi—kanunayng kauban sa inihaw ug pagkaon sa kadalanan.",
     note: "KAUBAN SA INIHAW",
-    image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Q6IgYrF0nkAnubETUD0Tcw19lsUsr8AFW8lxKHtSmO9lraAYPw1Smq6-qNKfRx-j61cDW7xFrhvm58oHU7flsdTDs6ihUoYe3T52iUqZ_KI2z7ut7u6HFCi9BbLR1AmUCXztI2Wzib4HO7=w1333-h1000-k-no",
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Puso_or_Hanging_Rice.jpg",
+    imageCredit: "LadyPinayForever · CC BY 4.0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:Puso_or_Hanging_Rice.jpg",
     restaurants: [
-      { name: "Carbon Market", rating: "4.2", type: "Public market", address: "M. C. Briones St, Cebu City", hours: "Reported closing: 3:30 PM", description: "Historic market with local produce, seafood, dried fish, and inexpensive street snacks.", image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Q6IgYrF0nkAnubETUD0Tcw19lsUsr8AFW8lxKHtSmO9lraAYPw1Smq6-qNKfRx-j61cDW7xFrhvm58oHU7flsdTDs6ihUoYe3T52iUqZ_KI2z7ut7u6HFCi9BbLR1AmUCXztI2Wzib4HO7=w1333-h1000-k-no", mapSearch: "Carbon Market Cebu City" }
+      { name: "Carbon Market", type: "Public market", address: "M. C. Briones St, Cebu City", description: "Historic market with local produce, seafood, dried fish, and inexpensive street snacks.", image: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Puso_or_Hanging_Rice.jpg", mapSearch: "Carbon Market Cebu City" }
     ]
   },
   {
@@ -65,10 +69,12 @@ export const dishes: Dish[] = [
     place: "Cebu City",
     description: "Crispy nga lumpia-style nga meryenda nga adunay ubod, giniling nga baboy, ug panimpla nga lima ka panakot.",
     note: "PABORITO SA MERYENDA",
-    image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SYVU6JrA_auQOWdtN6C2tL6av4qc5SrT72FuRES2tote0h3SfUUPT4FzRlIyf1M_Lf7i8faUnyJlvMrTarTDkth4FhEGcmBSU7h31RKOYaSj5hJSUarjfdBAgLTuu6jlv5oWqe=w1000-h1333-k-no",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Ngohiong.jpg",
+    imageCredit: "Herbertkikoy · CC BY-SA 4.0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:Ngohiong.jpg",
     restaurants: [
-      { name: "Ann's Ngohiong by Doming's", rating: "4.1", price: "₱1–₱500", type: "Chinese restaurant", address: "Fairlane Village, Guadalupe, Cebu City", description: "Known locally for its crisp ngohiong and thick sweet-spicy dipping sauce.", image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SYVU6JrA_auQOWdtN6C2tL6av4qc5SrT72FuRES2tote0h3SfUUPT4FzRlIyf1M_Lf7i8faUnyJlvMrTarTDkth4FhEGcmBSU7h31RKOYaSj5hJSUarjfdBAgLTuu6jlv5oWqe=w1000-h1333-k-no", mapSearch: "Ann's Ngohiong by Doming's Fairlane Village Guadalupe Cebu" },
-      { name: "Doming's Ngohiong", rating: "3.9", type: "Chinese restaurant", address: "V. Gullas St, Cebu City", description: "A central Cebu stop for the classic five-spice snack.", image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SYVU6JrA_auQOWdtN6C2tL6av4qc5SrT72FuRES2tote0h3SfUUPT4FzRlIyf1M_Lf7i8faUnyJlvMrTarTDkth4FhEGcmBSU7h31RKOYaSj5hJSUarjfdBAgLTuu6jlv5oWqe=w1000-h1333-k-no", mapSearch: "Doming's Ngohiong V Gullas Street Cebu" }
+      { name: "Ann's Ngohiong by Doming's", type: "Chinese restaurant", address: "25 Fairlane Village Rd, Guadalupe, Cebu City", hours: "Listed hours: 8:30 AM–5:00 PM Mon–Sat; 8:30 AM–12:00 PM Sun (third-party listing)", description: "Known locally for its crisp ngohiong and thick sweet-spicy dipping sauce.", image: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Ngohiong.jpg", mapSearch: "Ann's Ngohiong by Doming's Fairlane Village Guadalupe Cebu" },
+      { name: "Doming's Ngohiong", type: "Chinese restaurant", address: "Door 1, G/F Pacific Tourist Inn, M. Gotianuy Building, V. Gullas St, Cebu City", hours: "Listed hours: 8:00 AM–7:00 PM (third-party listing)", description: "A central Cebu stop for the classic five-spice snack.", image: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Ngohiong.jpg", mapSearch: "Doming's Ngohiong V Gullas Street Cebu" }
     ]
   },
   {
@@ -79,10 +85,12 @@ export const dishes: Dish[] = [
     place: "Mga baybayon sa Sugbo",
     description: "Usa ka paagi sa pag-andam sa seafood: sugba, tuwa, ug kilaw. Labing angay sa preskong kuha sa dagat.",
     note: "LAMI SA BAYBAYON",
-    image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Q4pJjCu3rAy2_hqha2R3UivCJAauDXfnZlpK5GGOpYGgAqYcJWCfYHcjX4GvcbmDhlPpwXdQz3KH22FgxqqtTJlxz0r3Z_lP9nV6orQdDNlVX5TX6T8dyzXMK1oB9q1t2_yIZU_wZsfJM=w1000-h1000-k-no",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/KINILAW_%28Carcar%2C_Cebu%29.jpg",
+    imageCredit: "whologwhy · CC BY 2.0 (representative kinilaw photo)",
+    imageSource: "https://commons.wikimedia.org/wiki/File:KINILAW_(Carcar,_Cebu).jpg",
     restaurants: [
-      { name: "STK ta Bay!", rating: "4.2", price: "₱500–₱1,000", type: "Seafood restaurant", address: "6 A. Climaco St, Cebu City", hours: "Reported hours: 11:00 AM–3:00 PM and 5:00–10:00 PM", description: "A heritage-style house restaurant with antiques; known for tuna panga and kinilaw.", image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Q4pJjCu3rAy2_hqha2R3UivCJAauDXfnZlpK5GGOpYGgAqYcJWCfYHcjX4GvcbmDhlPpwXdQz3KH22FgxqqtTJlxz0r3Z_lP9nV6orQdDNlVX5TX6T8dyzXMK1oB9q1t2_yIZU_wZsfJM=w1000-h1000-k-no", mapSearch: "STK ta Bay A Climaco Street Cebu" },
-      { name: "STK ta Bay! — SM City Cebu", rating: "4.0", type: "Filipino restaurant", address: "SM City Cebu, Juan Luna Ave Ext, Cebu City", description: "A mall-based option for a convenient sit-down seafood meal.", image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Se-__pTzH1ht9yJ6EeiHgIEwN2UGTZU4E62N-JrXBhgWlIqievuW-ZyOa2UCecwiH9ikSzTrmGPLhm1fQO86PQstAzU19NfonaCpC5Txs7VmM_gKgi9Se60R888ElnidgDfDL3=w1333-h1000-k-no", mapSearch: "STK ta Bay SM City Cebu" }
+      { name: "STK ta Bay!", type: "Seafood restaurant", address: "6 A. Climaco St, Cebu City", description: "A heritage-style house restaurant with antiques; known for tuna panga and kinilaw.", image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/KINILAW_%28Carcar%2C_Cebu%29.jpg", mapSearch: "STK ta Bay A Climaco Street Cebu" },
+      { name: "STK ta Bay! — SM City Cebu", type: "Filipino restaurant", address: "SM City Cebu, Juan Luna Ave Ext, Cebu City", description: "A mall-based option for a convenient sit-down seafood meal.", image: "", mapSearch: "STK ta Bay SM City Cebu" }
     ]
   },
   {
@@ -93,9 +101,11 @@ export const dishes: Dish[] = [
     place: "Cebu City",
     description: "Usa ka communal nga pagkaon diin ituslob ang puso sa nagbukal nga sagol sa atay, utok sa baboy, ug mga panakot.",
     note: "TILAW SA LOKAL NGA TRADISYON",
-    image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SDoY5bowcYItlHlUlGtyO69vauVYBAAlvgyqc5fpyvcXML_dVm-L13ag6leF7KS6TNO4C6R2R7wGxWyAwe6YL2aVTRnu8Bzb2BSMKmHFEbe8Xc7ZWFgrhFb6JlxRMeMTmHIsr-q1eMIU9h=w1000-h1333-k-no",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/72/Loy%27s_Tuslob_Buwa_at_the_Carbon_Market_The_Barracks_%282024-04-10%29.jpg",
+    imageCredit: "Wide Awake! · CC BY 4.0 (Loy’s Tuslob Buwa stall)",
+    imageSource: "https://commons.wikimedia.org/wiki/File:Loy%27s_Tuslob_Buwa_at_the_Carbon_Market_The_Barracks_(2024-04-10).jpg",
     restaurants: [
-      { name: "Azul", rating: "3.3", price: "₱1–₱500", type: "Filipino restaurant", address: "Taft Business Center, Gorordo Ave, Cebu City", hours: "Reported as open 24 hours", description: "A sit-down option for trying tuslob buwa with friends; check current hours before visiting.", image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SDoY5bowcYItlHlUlGtyO69vauVYBAAlvgyqc5fpyvcXML_dVm-L13ag6leF7KS6TNO4C6R2R7wGxWyAwe6YL2aVTRnu8Bzb2BSMKmHFEbe8Xc7ZWFgrhFb6JlxRMeMTmHIsr-q1eMIU9h=w1000-h1333-k-no", mapSearch: "Azul Taft Business Center Gorordo Cebu" }
+      { name: "Azul", type: "Filipino restaurant", address: "Taft Business Center, Asilo St, Gorordo Ave, Cebu City", hours: "Advertised as open 24 hours; verify with the restaurant before visiting", description: "A sit-down option for trying tuslob buwa with friends; check current hours before visiting.", image: "https://upload.wikimedia.org/wikipedia/commons/7/72/Loy%27s_Tuslob_Buwa_at_the_Carbon_Market_The_Barracks_%282024-04-10%29.jpg", mapSearch: "Azul Taft Business Center Gorordo Cebu" }
     ]
   },
   {
@@ -106,10 +116,12 @@ export const dishes: Dish[] = [
     place: "Cebu City",
     description: "Tinola-like nga tin-aw apan dato nga sabaw sa baka ug bukog, giluto hangtod mohumok ang karne ug mogawas ang lami sa sabaw.",
     note: "INIT UG MAKABUSOG",
-    image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QX6rQ6YMO4pcEfr3Mtiayxk8PPZSaxGxam2vKf7EdSUDb9cfUBHdZNw62nTR9xF1lG9UzKytooblxpHgSGh_gE9KMHynYNBRND1nCngt9an_jdVT5n3OH8TXLT5VT6liuMn5Oc=w1333-h1000-k-no",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/63/Chicken_pochero1.jpg",
+    imageCredit: "Valenzuela400 · CC BY-SA 4.0 (representative chicken pochero photo)",
+    imageSource: "https://commons.wikimedia.org/wiki/File:Chicken_pochero1.jpg",
     restaurants: [
-      { name: "Kusina Clasica", rating: "4.2", price: "₱1–₱500", type: "Filipino restaurant", address: "F. Cabahug St, Cebu City", hours: "Reported as open until midnight", description: "Known for hearty pochero, tender beef shank, and rich broth.", image: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QX6rQ6YMO4pcEfr3Mtiayxk8PPZSaxGxam2vKf7EdSUDb9cfUBHdZNw62nTR9xF1lG9UzKytooblxpHgSGh_gE9KMHynYNBRND1nCngt9an_jdVT5n3OH8TXLT5VT6liuMn5Oc=w1333-h1000-k-no", mapSearch: "Kusina Clasica F Cabahug Street Cebu City" },
-      { name: "Pochero Kinaraan", rating: "3.8", type: "Filipino restaurant", address: "1453 F. Gochan St, Cebu City", description: "Another local option for a traditional Cebu-style pochero meal.", mapSearch: "Pochero Kinaraan F Gochan Street Cebu" }
+      { name: "Kusina Clasica", type: "Filipino restaurant", address: "GND Building, F. Cabahug St, Kasambagan, Cebu City", hours: "Listed hours: 7:00 AM–11:00 PM Sun–Thu; 24 hours Fri–Sat (check current listing)", description: "Known for hearty pochero, tender beef shank, and rich broth.", image: "https://upload.wikimedia.org/wikipedia/commons/6/63/Chicken_pochero1.jpg", mapSearch: "Kusina Clasica F Cabahug Street Cebu City" },
+      { name: "Pochero Kinaraan", type: "Filipino restaurant", address: "1453 F. Gochan St, Cebu City", description: "Another local option for a traditional Cebu-style pochero meal.", mapSearch: "Pochero Kinaraan F Gochan Street Cebu" }
     ]
   },
   {
