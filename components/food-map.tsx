@@ -116,7 +116,7 @@ export default function FoodMap() {
         ))}
       </div>
       <p className="map-disclaimer">
-        Food-area pins mark broad destinations. Restaurant pins appear only when a published coordinate source was found. For venues without a defensible entrance coordinate, the list links directly to the matched Google Maps business listing instead of placing a guessed pin. Use “Directions / verify location” for current navigation and confirm the entrance shown by Maps. Ratings and prices are omitted when not recently verified, and hours can change.
+        Food-area pins mark broad destinations. Restaurant pins appear only when a published coordinate source was found. For venues without a defensible entrance coordinate, the list links directly to the matched Google Maps business listing instead of placing a guessed pin. Use “Directions / verify location” for current navigation and confirm the entrance shown by Maps. Source review: 10 October 2026. Ratings and prices are omitted when not recently verified, and hours can change.
       </p>
     </div>
   );
