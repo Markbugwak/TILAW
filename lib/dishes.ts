@@ -40,8 +40,6 @@ export const dishes: Dish[] = [
     imageSource: "https://commons.wikimedia.org/wiki/File:Lechon_Cebu_2.jpg",
     restaurants: [
       { name: "House of Lechon", type: "Lechon restaurant", address: "Acacia and Tojong Streets, Cebu City", hours: "10:00 AM–9:00 PM (Michelin listing; recheck before visiting)", description: "Upscale but comfortable dining, known for rich, mildly spicy lechon drippings.", image: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Lechon_Cebu_2.jpg", mapSearch: "House of Lechon Acacia Street Cebu City" },
-      { name: "House of Lechon — J Centre", type: "Restaurant / food court", address: "J Centre Building Food Court, A. S. Fortuna St, Mandaue", description: "A convenient casual option for the brand's signature seasoned lechon.", image: "", mapSearch: "House of Lechon J Centre Mandaue" },
-      { name: "House of Lechon — Banilad", type: "Filipino restaurant", address: "Gov. M. Cuenco Ave, Cebu City", description: "Another option for sharing a Cebuano lechon meal with friends.", image: "", mapSearch: "House of Lechon Gov M Cuenco Avenue Cebu" },
       { name: "Rico's Lechon", type: "Lechon restaurant", address: "Unit 15 & 16, Axis Entertainment Avenue, N. Escario St, Kamputhaw, Cebu City", hours: "10:00 AM–9:00 PM Mon–Thu; 10:00 AM–10:00 PM Fri–Sun (official site)", description: "Popular for its spicy lechon with bold garlic and chili flavors.", image: "", mapSearch: "Rico's Lechon N Escario Cebu City" },
       { name: "New Carcar City Public Market", type: "Public market", address: "Carcar City, Cebu", description: "A lively local market where vendors sell lechon by the kilo; a great south Cebu food stop.", image: "", mapSearch: "New Carcar City Public Market Cebu lechon" }
     ]
@@ -89,8 +87,8 @@ export const dishes: Dish[] = [
     imageCredit: "whologwhy · CC BY 2.0 (representative kinilaw photo)",
     imageSource: "https://commons.wikimedia.org/wiki/File:KINILAW_(Carcar,_Cebu).jpg",
     restaurants: [
-      { name: "STK ta Bay!", type: "Seafood restaurant", address: "6 A. Climaco St, Cebu City", description: "A heritage-style house restaurant with antiques; known for tuna panga and kinilaw.", image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/KINILAW_%28Carcar%2C_Cebu%29.jpg", mapSearch: "STK ta Bay A Climaco Street Cebu" },
-      { name: "STK ta Bay! — SM City Cebu", type: "Filipino restaurant", address: "SM City Cebu, Juan Luna Ave Ext, Cebu City", description: "A mall-based option for a convenient sit-down seafood meal.", image: "", mapSearch: "STK ta Bay SM City Cebu" }
+      { name: "STK ta Bay!", type: "Seafood restaurant", address: "6 A. Climaco St, Cebu City", hours: "Listed hours: 11:00 AM–3:00 PM and 5:00–10:00 PM daily; confirm before visiting", description: "A heritage-style house restaurant with antiques; known for tuna panga and kinilaw.", image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/KINILAW_%28Carcar%2C_Cebu%29.jpg", mapSearch: "STK ta Bay A Climaco Street Cebu" },
+      { name: "STK ta Bay! — SM City Cebu", type: "Filipino restaurant", address: "SM Branch, Juan Luna Ave Ext, Cebu City", hours: "Listed hours: 10:00 AM–10:00 PM daily; confirm before visiting", description: "A mall-based option for a convenient sit-down seafood meal.", image: "", mapSearch: "STK ta Bay SM City Cebu" }
     ]
   },
   {
