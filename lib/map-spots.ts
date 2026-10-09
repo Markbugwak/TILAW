@@ -53,7 +53,7 @@ const restaurantSpots: MapSpot[] = dishes.flatMap((dish) =>
       category: dish.id === "sutukil" ? "Seafood" : dishCategoryToMapCategory[dish.category] ?? "Local favorites",
       description: restaurant.description,
       association: coordinates ? "Pin coordinates were cross-checked against a published location source. Confirm the exact entrance in Google Maps before travelling." : "Exact map coordinates have not yet been verified for this venue. Use the Google Maps link to confirm the exact entrance; no map pin is shown yet.",
-      image: restaurant.image ?? dish.image,
+      image: restaurant.image || dish.image,
       mapLink: restaurant.mapPlaceId
         ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurant.mapSearch)}&query_place_id=${restaurant.mapPlaceId}`
         : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurant.mapSearch)}`,
