@@ -34,9 +34,9 @@ export const dishes: Dish[] = [
     place: "Mga karsada sa Cebu",
     description: "Bugas nga giluto sulod sa hinabol nga dahon sa lubi—kanunayng kauban sa inihaw ug pagkaon sa kadalanan.",
     note: "KAUBAN SA INIHAW",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Puso_or_Hanging_Rice.jpg?width=900",
-    imageCredit: "LadyPinayForever · CC BY 4.0",
-    imageSource: "https://commons.wikimedia.org/wiki/File:Puso_or_Hanging_Rice.jpg"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/HANGING_RICE.jpg?width=900",
+    imageCredit: "whologwhy · CC BY 2.0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:HANGING_RICE.jpg"
   },
   {
     id: "ngohiong",
@@ -70,7 +70,7 @@ export const dishes: Dish[] = [
     place: "Argao, Cebu",
     description: "Humok ug tam-is nga tradisyonal nga torta nga kasagarang gihimo alang sa panagtigom ug espesyal nga okasyon.",
     note: "TAM-IS NGA TRADISYON",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
+    image: ""
   },
   {
     id: "otap",
