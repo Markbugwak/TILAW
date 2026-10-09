@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
 import { ArrowUpRight, MapPin, Navigation, Star } from "lucide-react";
 import { mapSpots, type MapSpot } from "@/lib/map-spots";
+import SafeImage from "@/components/safe-image";
 
 const LeafletMap = dynamic(() => import("@/components/leaflet-map"), {
   ssr: false,
@@ -57,8 +58,16 @@ export default function FoodMap() {
         <aside className="map-side-panel" aria-live="polite" aria-label="Selected food area or restaurant">
           {selectedSpot ? (
             <>
-              <div className="map-detail-image" style={{ backgroundImage: selectedSpot.image ? `url("${selectedSpot.image}")` : undefined }}>
-                {!selectedSpot.image && <span className="map-photo-placeholder">{selectedSpot.kind === "restaurant" ? "VENUE PHOTO NOT VERIFIED" : "LOCAL FOOD PHOTO BEING VERIFIED"}</span>}
+              <div className="map-detail-image">
+                <SafeImage
+                  className="map-detail-photo"
+                  src={selectedSpot.image}
+                  alt={selectedSpot.name}
+                  width={800}
+                  height={500}
+                  fallbackClassName="map-photo-placeholder"
+                  fallbackLabel={selectedSpot.kind === "restaurant" ? "VENUE PHOTO NOT VERIFIED" : "LOCAL FOOD PHOTO BEING VERIFIED"}
+                />
                 <span className="map-detail-category">{selectedSpot.kind === "restaurant" ? "Restaurant" : selectedSpot.category}</span>
                 <span className="map-detail-number">{selectedSpot.kind === "restaurant" ? <MapPin size={14} /> : `0${mapSpots.findIndex((spot) => spot.id === selectedSpot.id) + 1}`}</span>
               </div>
