@@ -30,8 +30,28 @@ Restaurant-specific Google image hotlinks were removed from venue cards because 
 - **Carbon Market** — listed as a public market landmark; use the map search link for the current entrance and nearby stalls.
 - **New Carcar City Public Market** — public-market landmark retained; individual lechon stall details and prices are not claimed as verified.
 
+## Restaurant pin coordinate audit
+
+The map no longer substitutes a generic Cebu City coordinate when a restaurant coordinate is missing. A restaurant marker is shown only when a published coordinate source was found. Entries without a verified coordinate remain in the restaurant list and open a Google Maps search; the detail panel explicitly says their pin is pending.
+
+Source-backed coordinates currently plotted:
+- **House of Lechon, Acacia Street:** 10.3177322, 123.9017164. Cross-checked against published coordinate listings and the Michelin address at Acacia and Tojong Streets. Sources: https://es.sulit.ph/cebu-lechon-62-of-cebus-best-lechon-establishments/ and https://guide.michelin.com/ph/en/central-visayas/cebu-city_2340421/restaurant/house-of-lechon
+- **Rico's Lechon, N. Escario / Vibo Place:** 10.3184728, 123.8961113. Cross-checked against published coordinate listings and the official branch address. Sources: https://es.sulit.ph/cebu-lechon-62-of-cebus-best-lechon-establishments/ and https://ricoslechon.com/
+- **Carbon Market, Ermita:** 10.29142, 123.8991. Market-level coordinate, not an individual vendor or stall. Source: https://cebucarbon.com/
+- **STK ta Bay!, 6 A. Climaco St:** 10.313226, 123.890103. Published restaurant coordinate. Source: https://yenliving.com/philippines-cube-studytour-merise/amp/
+
+Still pending exact map coordinates:
+- New Carcar City Public Market — verified place name and Plus Code 4J4W+4P5, but a numeric coordinate has not been independently confirmed in this audit.
+- Ann's Ngohiong by Doming's — address/listing found at 25 Fairlane Village Rd; exact venue coordinate not independently confirmed.
+- Doming's Ngohiong, V. Gullas St — listing/address found; exact venue coordinate not independently confirmed.
+- STK ta Bay! SM City Cebu — exact mall unit/coordinate not confirmed.
+- Azul, Taft Business Center — address/listing found; exact unit coordinate not independently confirmed.
+- Kusina Clasica, GND Building / F. Cabahug St — address listing found, but third-party sources differ on city labeling; exact entrance coordinate not independently confirmed.
+- Pochero Kinaraan, F. Gochan St — address listing found; exact venue coordinate not independently confirmed.
+
 ## Deliberately removed or not claimed
 
 - House of Lechon J Centre and Banilad entries were removed because the exact current branches could not be sufficiently confirmed during this pass.
 - Unverified ratings and price ranges were removed rather than presented as current facts.
-- Restaurant map pins still use approximate neighborhood coordinates. The site now says so clearly and directs visitors to Google Maps to confirm the actual entrance. Exact GPS pins remain a follow-up task.
+- The city/food-area pins remain broad destination markers, not restaurant entrances. The four coordinates above are source-backed location points, but visitors should still verify the entrance in Google Maps before travelling.
+- This was a remote source audit, not an on-site GPS survey.
