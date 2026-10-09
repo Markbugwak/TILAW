@@ -1,5 +1,6 @@
 "use client";
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import SafeImage from "@/components/safe-image";
 import { ArrowDownRight, ArrowRight, Compass, Search, Menu, X, Utensils } from "lucide-react";
 import { dishes, categories, type Dish } from "@/lib/dishes";
