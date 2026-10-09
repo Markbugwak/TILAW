@@ -20,7 +20,7 @@ export default function FoodMap() {
     </div>
     <div className="map-layout"><div className="map-canvas-wrap"><LeafletMap places={visiblePlaces} selectedId={selectedPlace?.id ?? ""} onSelect={selectPlace} /><div className="map-legend"><span><i /> Food area</span><span>OpenStreetMap</span></div></div>
       <aside className="map-side-panel" aria-live="polite">{selectedPlace ? <>
-        <div className="map-detail-image" style={{ backgroundImage: `url("${selectedPlace.image}")` }}><span className="map-detail-category">{selectedPlace.category}</span><span className="map-detail-number">0{foodPlaces.findIndex((place) => place.id === selectedPlace.id) + 1}</span></div>
+        <div className="map-detail-image" style={{ backgroundImage: `url("${selectedPlace.image}")` }}>{!selectedPlace.image && <span className="map-photo-placeholder">LOCAL FOOD PHOTO BEING VERIFIED</span>}<span className="map-detail-category">{selectedPlace.category}</span><span className="map-detail-number">0{foodPlaces.findIndex((place) => place.id === selectedPlace.id) + 1}</span></div>
         <div className="map-detail-content"><div className="map-location-label"><MapPin size={13} /> {selectedPlace.area}</div><h3>{selectedPlace.name}</h3><div className="map-specialty">Known for <strong>{selectedPlace.specialty}</strong></div><p>{selectedPlace.description}</p><div className="map-association-note">{selectedPlace.association}</div><a className="map-directions" href={selectedPlace.mapLink} target="_blank" rel="noreferrer"><Navigation size={15} /> Explore this area <ArrowUpRight size={15} /></a></div>
       </> : <div className="map-empty">No places match this filter yet.</div>}</aside>
     </div>
