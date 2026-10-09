@@ -51,6 +51,13 @@ Still pending exact entrance coordinates (do not publish map pins yet):
 - **Kusina Clasica, GND Building / F. Cabahug St** — listing matches GND Building; another directory describes it as on the second floor. City labeling conflicts between Cebu City and Mandaue City sources, and the customer entrance coordinate is not confirmed. Listing: https://kusina-clasica.locallya.com/
 - **Pochero Kinaraan, 1453 F. Gochan St** — listing matches the street address. Exact storefront entrance coordinate not independently confirmed. Listing: https://www.waze.com/live-map/directions/pochero-kinaraan-f.-gochan-cebu-city?to=place.w.81199207.812057608.14510015
 
+
+## Navigation-first fallback for the seven pending entrances
+
+**Fallback applied:** 10 October 2026. The seven listings that still lack independently verified door-level coordinates are not assigned guessed latitude/longitude values. Each listing uses its matched Google Place ID in its Google Maps destination link, so the user can open the specific business listing and use the current directions/entrance information provided there. This makes the venue navigation-ready without misrepresenting a business/building pin as a verified customer-door coordinate.
+
+This fallback is a practical navigation solution, **not proof that the exact entrance coordinates were independently surveyed**. Keep these seven off the in-app coordinate pins until a reliable entrance-level source is available. The venue-specific map links and the visible UI note are the source of truth for this distinction.
+
 ## Deliberately removed or not claimed
 
 - House of Lechon J Centre and Banilad entries were removed because the exact current branches could not be sufficiently confirmed during this pass.
