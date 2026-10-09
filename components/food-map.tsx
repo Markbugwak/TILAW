@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
 import { ArrowUpRight, MapPin, Navigation, Star } from "lucide-react";
 import { mapSpots, type MapSpot } from "@/lib/map-spots";
+import SafeImage from "@/components/safe-image";
 
 const LeafletMap = dynamic(() => import("@/components/leaflet-map"), {
   ssr: false,
@@ -57,9 +58,18 @@ export default function FoodMap() {
         <aside className="map-side-panel" aria-live="polite" aria-label="Selected food area or restaurant">
           {selectedSpot ? (
             <>
-              <div className="map-detail-image" style={{ backgroundImage: selectedSpot.image ? `url("${selectedSpot.image}")` : undefined }}>
-                {!selectedSpot.image && <span className="map-photo-placeholder">{selectedSpot.kind === "restaurant" ? "VENUE PHOTO NOT VERIFIED" : "LOCAL FOOD PHOTO BEING VERIFIED"}</span>}
+              <div className="map-detail-image">
+                <SafeImage
+                  className="map-detail-photo"
+                  src={selectedSpot.image}
+                  alt={selectedSpot.name}
+                  width={800}
+                  height={500}
+                  fallbackClassName="map-photo-placeholder"
+                  fallbackLabel={selectedSpot.kind === "restaurant" ? "VENUE PHOTO NOT VERIFIED" : "LOCAL FOOD PHOTO BEING VERIFIED"}
+                />
                 <span className="map-detail-category">{selectedSpot.kind === "restaurant" ? "Restaurant" : selectedSpot.category}</span>
+                {selectedSpot.imageNote && <span className="map-photo-note">{selectedSpot.imageNote}</span>}
                 <span className="map-detail-number">{selectedSpot.kind === "restaurant" ? <MapPin size={14} /> : `0${mapSpots.findIndex((spot) => spot.id === selectedSpot.id) + 1}`}</span>
               </div>
               <div className="map-detail-content">
@@ -107,7 +117,7 @@ export default function FoodMap() {
         ))}
       </div>
       <p className="map-disclaimer">
-        Food-area pins mark broad destinations. Restaurant pins appear only when a published coordinate source was found. For venues without a defensible entrance coordinate, the list links directly to the matched Google Maps business listing instead of placing a guessed pin. Use “Directions / verify location” for current navigation and confirm the entrance shown by Maps. Ratings and prices are omitted when not recently verified, and hours can change.
+        Food-area pins mark broad destinations. Restaurant pins appear only when a published coordinate source was found. For venues without a defensible entrance coordinate, the list links directly to the matched Google Maps business listing instead of placing a guessed pin. Use “Directions / verify location” for current navigation and confirm the entrance shown by Maps. Source review: 10 October 2026. Ratings and prices are omitted when not recently verified, and hours can change.
       </p>
     </div>
   );
