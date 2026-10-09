@@ -22,7 +22,7 @@ export const dishes: Dish[] = [
     place: "Tibuok Sugbo",
     description: "Hinay-hinay nga sinugba nga baboy nga nailhan sa nipis ug malutong nga panit ug humot nga panimpla.",
     note: "ANG GARBO SA SUGBO",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Lechon_sa_Cebu.jpg?width=900",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/26/Lechon_sa_Cebu.jpg",
     imageCredit: "Bim24 · CC BY 4.0",
     imageSource: "https://commons.wikimedia.org/wiki/File:Lechon_sa_Cebu.jpg"
   },
@@ -34,9 +34,9 @@ export const dishes: Dish[] = [
     place: "Mga karsada sa Cebu",
     description: "Bugas nga giluto sulod sa hinabol nga dahon sa lubi—kanunayng kauban sa inihaw ug pagkaon sa kadalanan.",
     note: "KAUBAN SA INIHAW",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/HANGING_RICE.jpg?width=900",
-    imageCredit: "whologwhy · CC BY 2.0",
-    imageSource: "https://commons.wikimedia.org/wiki/File:HANGING_RICE.jpg"
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Puso_or_Hanging_Rice.jpg",
+    imageCredit: "LadyPinayForever · CC BY 4.0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:Puso_or_Hanging_Rice.jpg"
   },
   {
     id: "ngohiong",
@@ -46,7 +46,7 @@ export const dishes: Dish[] = [
     place: "Cebu City",
     description: "Crispy nga lumpia-style nga meryenda nga adunay sagol nga utanon ug panimpla nga lima ka panakot.",
     note: "PABORITO SA MERYENDA",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ngohiong.jpg?width=900",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Ngohiong.jpg",
     imageCredit: "Herbertkikoy · CC BY-SA 4.0",
     imageSource: "https://commons.wikimedia.org/wiki/File:Ngohiong.jpg"
   },
@@ -58,9 +58,9 @@ export const dishes: Dish[] = [
     place: "Mga baybayon sa Sugbo",
     description: "Usa ka paagi sa pag-andam sa seafood: sugba, tuwa, ug kilaw. Labing angay sa preskong kuha sa dagat.",
     note: "LAMI SA BAYBAYON",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Smiley_Larsian_By_The_Sea_Sutukil_at_the_IL_Corso_Food_Yard_%282025-10-05%29.jpg?width=900",
-    imageCredit: "Wide Awake! · CC BY 4.0",
-    imageSource: "https://commons.wikimedia.org/wiki/File:Smiley_Larsian_By_The_Sea_Sutukil_at_the_IL_Corso_Food_Yard_(2025-10-05).jpg"
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/KINILAW_%28Carcar%2C_Cebu%29.jpg",
+    imageCredit: "whologwhy · CC BY 2.0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:KINILAW_(Carcar,_Cebu).jpg"
   },
   {
     id: "torta",
@@ -80,8 +80,8 @@ export const dishes: Dish[] = [
     place: "Cebu City",
     description: "Nipis, flaky, ug tam-is nga pastry nga nahimong usa sa mga iladong pasalubong sa Cebu.",
     note: "PASALUBONG SA SUGBO",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Otap_%28Utap%29_puff_pastry.jpg?width=900",
-    imageCredit: "Obsidian Soul · CC0",
-    imageSource: "https://commons.wikimedia.org/wiki/File:Otap_(Utap)_puff_pastry.jpg"
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/78/Otap.jpg",
+    imageCredit: "Obsidian Soul · CC BY-SA 3.0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:Otap.jpg"
   }
 ];
