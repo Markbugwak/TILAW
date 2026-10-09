@@ -2,6 +2,8 @@
 
 Food photographs are loaded from Wikimedia Commons' static upload CDN using direct file URLs rather than the `Special:FilePath` redirect endpoint. This avoids the redirect endpoint that was returning HTTP 429 errors in development; the images are still hosted by Wikimedia, not bundled locally.
 
+- **Cebuano lechon vendor (story section)** — RizaCPH, [source](https://commons.wikimedia.org/wiki/File:Vendor_Preparing_Lechon_at_a_Food_Stall.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). No changes made.
+
 - **Lechon Cebu** — Bim24, [source](https://commons.wikimedia.org/wiki/File:Lechon_sa_Cebu.jpg), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). No changes made.
 - **Puso / hanging rice** — LadyPinayForever, [source](https://commons.wikimedia.org/wiki/File:Puso_or_Hanging_Rice.jpg), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). No changes made.
 - **Ngohiong** — Herbertkikoy, [source](https://commons.wikimedia.org/wiki/File:Ngohiong.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). No changes made.
