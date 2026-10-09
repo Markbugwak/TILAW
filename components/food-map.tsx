@@ -73,7 +73,7 @@ export default function FoodMap() {
                   </div>
                 )}
                 <p>{selectedSpot.description}</p>
-                {selectedSpot.hours && <div className="map-restaurant-hours"><strong>Hours:</strong> {selectedSpot.hours}</div>}
+                {selectedSpot.hours && <div className="map-restaurant-hours"><strong>Hours:</strong> {selectedSpot.hours}</div>}{selectedSpot.kind === "restaurant" && !selectedSpot.coordinates && <div className="map-association-note">Exact pin not verified yet. Open Google Maps to confirm the venue before travelling.</div>}
                 <div className="map-association-note">{selectedSpot.association}</div>
                 {selectedSpot.sourceUrl && selectedSpot.sourceLabel && (
                   <a className="map-source-link" href={selectedSpot.sourceUrl} target="_blank" rel="noreferrer">
@@ -107,7 +107,7 @@ export default function FoodMap() {
         ))}
       </div>
       <p className="map-disclaimer">
-        The map includes food-area pins and restaurant suggestions. Restaurant addresses were checked against available listings, but map markers still use approximate neighborhood coordinates and are not GPS-verified entrances. Always open “Directions / verify location” to confirm the exact venue. Ratings and prices are omitted when not recently verified; opening hours can change, so confirm before visiting.
+        Food-area pins mark broad destinations. Restaurant pins appear only when a published coordinate source was found; other restaurants remain in the list without a pin until their exact location is verified. Open “Directions / verify location” to confirm the entrance. Ratings and prices are omitted when not recently verified, and hours can change.
       </p>
     </div>
   );
